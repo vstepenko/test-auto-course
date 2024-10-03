@@ -25,4 +25,43 @@
         </addColumn>
     </changeSet>
 
+    <changeSet id="3_add_mark_directory" author="stepenko">
+        <createTable tableName="mark_directory" >
+            <column name="mark" type="VARCHAR(1)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="max_point" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="3_fill_mark_directory" author="stepenko">
+
+        <insert tableName="mark_directory">
+            <column name="mark" value="F"/>
+            <column name="max_point" value="59"/>
+        </insert>
+
+        <insert tableName="mark_directory">
+            <column name="mark" value="E"/>
+            <column name="max_point" value="66"/>
+        </insert>
+        <insert tableName="mark_directory">
+            <column name="mark" value="D"/>
+            <column name="max_point" value="74"/>
+        </insert>
+        <insert tableName="mark_directory">
+            <column name="mark" value="C"/>
+            <column name="max_point" value="81"/>
+        </insert>
+        <insert tableName="mark_directory">
+            <column name="mark" value="B"/>
+            <column name="max_point" value="89"/>
+        </insert>
+        <insert tableName="mark_directory">
+            <column name="mark" value="A"/>
+            <column name="max_point" value="100"/>
+        </insert>
+    </changeSet>
 </databaseChangeLog>
