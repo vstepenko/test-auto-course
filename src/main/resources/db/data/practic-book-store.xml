@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <changeSet id="1_create_store_tables" author="stepenko">
+        <createTable tableName="warehouse" >
+            <column name="id" autoIncrement="true" type="INTEGER">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="code" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="count" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="book_order" >
+            <column name="id" autoIncrement="true" type="INTEGER">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="item_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <insert tableName="warehouse">
+            <column name="code" value="book"/>
+            <column name="count" value="20"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
