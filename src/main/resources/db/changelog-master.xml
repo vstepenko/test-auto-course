@@ -5,4 +5,5 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd">
     <include file="db/data/lection6.xml" relativeToChangelogFile="false"/>
     <include file="/db/data/practic-book-store.xml" relativeToChangelogFile="false"/>
+    <include file="/db/data/performance-test.xml" relativeToChangelogFile="false"/>
 </databaseChangeLog>
